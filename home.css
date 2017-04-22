@@ -53,13 +53,11 @@ body
 {
 	width: auto;
 	height: auto;
-	float: right;
 	text-decoration: none;
 	list-style: none;
-	float: right;
-	margin-right: 100px;
 	margin-top: 35px;
-	position: static;
+	float: right;
+	margin-right: 50px;
 }
 
 .itens_menu ul
@@ -68,7 +66,6 @@ body
 	list-style: none;	
 	display: inline;
 	color: blue;
-	float: right;
 	font-family: 'Questrial';
 	font-weight: bold;
 }
@@ -118,11 +115,12 @@ body
 
 }
 
+
+
 .itens_menu a:nth-child(n) li
 {
 	
 	transition: 1s;
-	float: right;
 }
 
 .itens_menu a:hover:nth-child(n) li
@@ -136,25 +134,34 @@ body
 
 .fb
 {
-	/*
-	<a href="https://github.com/renanm99"><li class=""></li></a>
-	*/
-	background-image: url('img/fb.png');
 	background-repeat: no-repeat;
-	width: 10%;
-	height: 22%;
-	background-size: 100%;
-	margin-top: -20px;
-	background-color: black;
+	width: 20px;
+	height: 20px;
+	background-size: 30%;
+	margin-left: 50px;
 }
 
 .git
 {
-	background-image: url('img/git.png');
 	background-repeat: no-repeat;
-	width: 10%;
-	height: 22%;
-	background-size: 100%;
-	margin-top: -20px;
-	background-color: black;
+	width: 58px;
+	height: 16px;
+	background-size: 50%;
+	margin-top: 2px;
+	float: right;
+	margin-left: -30px;
 }
+
+/*
+<a href="https://github.com/renanm99"><div class="git">bbbbbbbbbb</div></a>
+*/
+
+
+/*
+
+<a href="https://www.facebook.com/renanm21"><li class="fb"></li></a>
+			<a href="https://github.com/renanm99"><li class="git"></li></a>
+
+*/
+
+
