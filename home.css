@@ -5,19 +5,18 @@ body
 
 .page
 {
-	background-color: #fff;
-	margin: 50px;
 	width: auto;
-	height: auto;
+	margin: 50px;
 }
 
 .menu
 {
 	width: auto;
-	height: 120px;
+	height: 140px;
 	border-style:  solid;
-	border-width: 2px;
+	border-width: 1px;
 	border-color: #757575;
+	background-color: #fff;
 }
 
 .r
@@ -51,13 +50,12 @@ body
 
 .itens_menu
 {
-	width: auto;
-	height: auto;
+	width: relative;
 	text-decoration: none;
 	list-style: none;
-	margin-top: 35px;
 	float: right;
-	margin-right: 50px;
+	margin-top: 50px;
+	margin-left: -200px;
 }
 
 .itens_menu ul
@@ -68,6 +66,7 @@ body
 	color: blue;
 	font-family: 'Questrial';
 	font-weight: bold;
+	font-size: 150%;
 }
 
 .itens_menu ul a
@@ -75,7 +74,6 @@ body
 	color: #0088dd;
 	text-decoration: none;
 	transition: 2s;
-	font-size: 100%;
 }
 
 .itens_menu ul a:hover
@@ -91,9 +89,9 @@ body
 	list-style: none;	
 	display: inline;
 	color: black;
-	margin-left: 40px;
 	font-family: 'Questrial';
 	font-weight: bold;
+	margin-left: 20px;
 }
 
 .itens_menu li a
@@ -111,7 +109,6 @@ body
 	font-size: 110%;
 	transition: 0.5s;
 	text-shadow: 0 0 15px #000000;
-	margin-top: -50px;
 
 }
 
@@ -125,10 +122,8 @@ body
 
 .itens_menu a:hover:nth-child(n) li
 {
-	margin-top: -20px;
 	background-size: 55%;
 	transition: 0.5s;
-	margin-top: -20px;
 	height: 21%;
 }
 
@@ -147,15 +142,12 @@ body
 	width: 58px;
 	height: 16px;
 	background-size: 50%;
-	margin-top: 2px;
-	float: right;
-	margin-left: -30px;
+	margin-left: -10px;
 }
 
 /*
 <a href="https://github.com/renanm99"><div class="git">bbbbbbbbbb</div></a>
 */
-
 
 /*
 
