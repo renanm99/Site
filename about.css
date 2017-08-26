@@ -24,10 +24,6 @@ body
 .skill
 {
 	height: 20px;
-	/*
-
-	background-color: #737373;
-	*/
 	background-color: #737373;
 	float: right;
 	margin-left: 10px;
@@ -36,18 +32,20 @@ body
 	color: #e6e6e6;
 }
 
-.contacts
+.contacts li
 {
 	text-decoration: none;
 	list-style: none;
-	display: inline;
-	background-color: black;
+	display: inline-block;
 }
 
 .img_contacts
 {
-	width: 115px;
-	height: 115px;
-	background-size: 100%;
-	background-color: black;
+	width: 150px;
+	height: 150px;
+}
+
+.bubb
+{
+	margin-top: 70px;
 }

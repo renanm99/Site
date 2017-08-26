@@ -91,15 +91,17 @@
 </div>
 
 <div class="contacts">
-<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<div class="col-lg-4 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1">
 
-	<a href="facebook.com">aaaaaaaa
+	<div class="bubb">
+
+	<a href="https://www.facebook.com/renanm21">
 	<li>
 		<img src="./img/face_gray.png" class="img_contacts">
 	</li>
 </a>
 
-	<a href="facebook.com">bbbbbbbb
+	<a href="github.com/renanm99">
 	<li>
 		<img src="./img/git_gray.png" class="img_contacts">
 	</li>
@@ -114,6 +116,9 @@
 		<img src="./img/email_gray.png" class="img_contacts">
 	</li>
 </a>
+
+</div>
+	
 
 </div>
 </div>
@@ -132,30 +137,27 @@
 
 
 <script type="text/javascript">
-
 	$("document").ready(function(){
-
+		
 		var landimages = ["./img/road.jpg","./img/rocha.jpg","./img/ponte.jpeg"];
 		var focusimage = 1;
 
 		$("#landsa").ready(function ae(){
 
 			setTimeout(function(){
+
 				$("#lands").animate({
 					opacity: 0
 					}, 500, "easeInQuad", function (){
+
 						var image = landimages[focusimage];
 						focusimage++;
 						if(focusimage>2){
 							focusimage=0;
 						}
 
-
 						$("#lands").attr("src", image);
-
-
-						$("#lands").animate(
-						{
+						$("#lands").animate({
 							opacity: 1
 						}, 500, "easeInQuad", function(){
 							ae();
@@ -164,63 +166,7 @@
 
 			}, 4000);
 		});
-
-
-
-
-
-
-
-
-
 	});
 </script>
-
-<!--
-<script>
-alert();
-$("document").ready(function(){
-
-	$("#aaa").css("color", "white");
-
-	var landimages = ["./img/road.jpg","./img/road2.jpg","./img/rocha.jpg","./img/ponte.jpg"];
-	var focusimage = 1;
-
-	$("#lands").ready(function ae(){
-		setTimeout(function(){
-			$("#lands").animate({
-				opacity = 0;
-			}, 1000, "easeInQuad", function(){
-				var image = landimages[focusimage];
-				focusimage++;
-				if(focusimage>3){
-					focusimage=0;
-				}
-
-				$("#lands").attr("src", image);
-
-				$("#lands").animate({
-					opacity = 1;
-				}, 700, "easeInQuad", function(){
-					ae();
-				});
-			});
-
-		}, 4000);
-	});
-
-
-
-
-
-
-});
-	
-</script>
--->
-
-<!--
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
--->
 </body>
 </html>
