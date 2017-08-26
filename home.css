@@ -21,11 +21,11 @@ body
 
 .r
 {
-	background-image: url('img/r.jpg');
+	background-image: url('./img/r.jpg');
 	background-repeat: no-repeat;
-	width: 50%;
-	height: 50%;
-	background-size: 65%;
+	width: 70px;
+	height: 70px;
+	background-size: 100%;
 }
 
 .logo
@@ -40,6 +40,7 @@ body
 	margin-left: 50px;
 	float: left;
 	transition: 2s;
+	font-size: 300%;
 }
 
 .logo:hover
@@ -74,6 +75,7 @@ body
 	color: #0088dd;
 	text-decoration: none;
 	transition: 2s;
+	font-size: 150%;
 }
 
 .itens_menu ul a:hover
@@ -92,6 +94,7 @@ body
 	font-family: 'Questrial';
 	font-weight: bold;
 	margin-left: 20px;
+
 }
 
 .itens_menu li a
@@ -100,6 +103,7 @@ body
 	text-decoration: none;
 	transition: 2s;
 	font-size: 100%;
+	font-size: 150%;
 }
 
 .itens_menu li:hover:nth-last-child(n+2) a
