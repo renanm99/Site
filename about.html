@@ -1,0 +1,172 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viweport" content="width = device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>ROM - Sobre</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="page">
+
+<div class="menu">
+
+<div class="itens_menu">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<ul>
+		<a href="index.html">Início</a>
+			<li><a href="about.html"> Sobre</a></li>
+
+			<a href="https://www.facebook.com/renanm21" target="_blank">
+			<li>
+			<img class="fb" src="./img/fb.png">
+			</li>
+			</a>
+			<a href="https://github.com/renanm99" target="_blank">
+			<li>
+			<img src="./img/git.png" class="git">
+			</li>
+			</a>
+	</ul>
+	
+</div>
+</div>
+
+
+<div class="logo"><div src="./img/r.jpg" class="r"></div>Renan Machado
+
+</div>
+
+
+</div>
+
+
+
+<img class = "img" src="./img/road.jpg" id="lands" alt="lands">
+
+
+<div class="container">
+<div class="row">
+
+
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-bottom: 50px;">
+<div class="texto">
+
+<h1 style="border-bottom: solid black 2px; margin-bottom: 5px;">Hi, my name is Renan Oliveira</h1>
+ I'm 17 year old computer science student from Brazil, São Paulo and I've been studying about programming languages and coding for sometime and it's what I want to work and do something great with it.<br>
+
+ <h1 style="border-bottom: solid black 2px; margin-bottom: 5px;margin-top:30px">Facts about me</h1>
+ <li>Video-games is something I can't let go.</li>
+ <li>I listen to music everytime, and I like all kinds of music.</li>
+ <li>I love japanese food.</li>
+ <li>But I can't not show my love for steaks and barbecue.</li>
+ <li>My favorite sport is Basketball.</li>
+</div>
+</div>
+
+
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<div class="texto" style="font-size: 150%">
+
+
+ <h1 style="border-bottom: solid black 2px; margin-bottom: 5px;margin-top:20px">My Skills</h1>
+ <div><div class = "skill" style="width: 42%;">70%</div> Java </div>
+ <div>C#<div class = "skill" style="width: 39%;">65%</div></div>
+ <div>Ruby<div class = "skill" style="width: 27%;">45%</div></div>
+ <div>HTML/CSS<div class = "skill" style="width: 30%;">50%</div></div>
+ <div>Javascript<div class = "skill" style="width: 24%;">40%</div></div>
+ <div>Programming Logic <div class = "skill" style="width: 45%;">75%</div></div>
+</div>
+</div>
+
+<div class="contacts">
+<div class="col-lg-4 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1">
+
+	<div class="bubb">
+
+	<a href="https://www.facebook.com/renanm21">
+	<li>
+		<img src="./img/face_gray.png" class="img_contacts">
+	</li>
+</a>
+
+	<a href="github.com/renanm99">
+	<li>
+		<img src="./img/git_gray.png" class="img_contacts">
+	</li>
+</a>
+
+	<a href="facebook.com">
+	<li>
+		<img src="./img/linkedin_gray.png" class="img_contacts">
+	</li></a>
+<a>
+	<li>
+		<img src="./img/email_gray.png" class="img_contacts">
+	</li>
+</a>
+
+</div>
+	
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+<script type="text/javascript">
+	$("document").ready(function(){
+		
+		var landimages = ["./img/road.jpg","./img/rocha.jpg","./img/ponte.jpeg"];
+		var focusimage = 1;
+
+		$("#landsa").ready(function ae(){
+
+			setTimeout(function(){
+
+				$("#lands").animate({
+					opacity: 0
+					}, 500, "easeInQuad", function (){
+
+						var image = landimages[focusimage];
+						focusimage++;
+						if(focusimage>2){
+							focusimage=0;
+						}
+
+						$("#lands").attr("src", image);
+						$("#lands").animate({
+							opacity: 1
+						}, 500, "easeInQuad", function(){
+							ae();
+						});
+				});
+
+			}, 4000);
+		});
+	});
+</script>
+</body>
+</html>
