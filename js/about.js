@@ -2,7 +2,7 @@ function loadPage() {
     $('body').animate({
         scrollTop : 0
     },0.1);
-
+	
     var landimages = ["./img/road.jpg", "./img/rocha.jpg", "./img/ponte.jpeg"];
     var focusimage = Math.floor((Math.random() * 3));
     var image = landimages[focusimage];
@@ -42,13 +42,12 @@ function loadPage() {
     var $elem = $(haha);
 
     $("#mail").click(function(){
-        aa();
-        if($("#form").css('opacity')== 0){
-            $("#form").animate({
+        if($("#formula").css('opacity')== 0){
+            $("#formula").animate({
                 opacity: 1
             },400);
         }else{
-            $("#form").animate({
+            $("#formula").animate({
                 opacity: 0
             },400);
         }
