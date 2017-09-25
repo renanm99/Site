@@ -4,7 +4,7 @@ body
 }
 
 @media only screen and (orientation: portrait){
-	/* For desktop: */
+	/* For 'mobile': */
 	.container{
 		font-size: 300%;
 	}
@@ -77,12 +77,28 @@ body
 	margin-left: -10px;
 }
 
+@media only screen and (orientation: portrait){
+	/* For 'mobile': */
+	.block-img{
+		position: relative;
+		overflow: hidden;
+	}
+
+	.img{
+		height: 650px;
+		transform: scaleX(2.3);
+	}
+}
+
+.block-img
+{
+	width: 100%;
+	height: 100%;
+}
+
 .img
 {
 	width: 100%;
-	height: 1%;
-	background-position-x: center;
-	background-position-y: -10px;
 }
 
 .texto
