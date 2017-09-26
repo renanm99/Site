@@ -26,7 +26,6 @@ function loadPage() {
                 var image = landimages[focusimage];
                 focusimage++;
 
-
                 $("#lands").attr("src", image);
                 $("#lands").animate({
                     opacity: 1
