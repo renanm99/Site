@@ -1,7 +1,9 @@
 function loadPage() {
-    $('body').animate({
-        scrollTop : 0
+    $('html, body').animate({
+        scrollTop : '0px'
     },0.1);
+
+    
 	
     var landimages = ["./img/road.jpg", "./img/rocha.jpg", "./img/ponte.jpeg"];
     var focusimage = Math.floor((Math.random() * 3));
@@ -36,10 +38,40 @@ function loadPage() {
         }, 6000);
     });
 
-    $("#haha").animate({
-        marginTop: '-=1000px'
-    }, 1200, "easeOutQuad");
-    var $elem = $(haha);
+    var i = 0;
+    var lag = $(window).width();
+
+    if(lag<1020){
+        $("#haha").animate({
+            marginTop: '-=1000px'
+        }, 1000, "easeOutQuad");
+        var $elem = $(haha);
+        i = 1;
+        ii();
+    }else {
+        function NotMobile(){
+        $(window).scroll(function (event) {
+            var scroll = $(window).scrollTop();
+            if(scroll > 80 && i==0){
+                $("#haha").animate({
+                    marginTop: '-=1000px'
+                }, 1000, "easeOutQuad");
+                var $elem = $(haha);
+                i = 1;
+            }
+    
+            if(scroll < 1 && i==1 && lag>1020){
+                $("#haha").animate({
+                    marginTop: '+=1000px'
+                }, 500, "easeInQuad");
+                var $elem = $(haha);
+                i = 0;
+            }
+        });
+    }
+    NotMobile();
+}
+    
 
     $("#mail").click(function(){
         if($("#formula").css('opacity')== 0){
