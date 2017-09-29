@@ -38,7 +38,6 @@ function loadPage() {
     });
 	
 	
-	//
 	
 	var txt = 0;
     var hab=0;
