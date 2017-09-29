@@ -3,6 +3,11 @@ body
 	background-image: url('img/back.jpg');
 }
 
+div{
+	font-family: 'Questrial';
+	overflow: hidden;
+}
+
 @media only screen and (orientation: portrait){
 	/* For 'mobile': */
 	.container{
@@ -101,12 +106,24 @@ body
 	width: 100%;
 }
 
+.txt
+{
+	right: 600px;
+	position: relative;
+}
+
+.hab
+{
+	left: 650px;
+	position: relative;
+}
+
 .texto
 {
 	font-size: 220%;
-	font-family: 'Questrial';
 	text-align: center;
 	margin-top: 50px;
+	position: relative;
 }
 
 .skill
@@ -118,6 +135,13 @@ body
 	font-size: 80%;
 	font-weight: bold;
 	color: #e6e6e6;
+}
+
+.contact
+{
+	left: 0px;
+	right: 0px;
+	position:relative;
 }
 
 .contacts li
@@ -141,5 +165,4 @@ body
 .mail
 {
 	font-size: 200%;
-	font-family: 'Questrial';
 }

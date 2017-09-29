@@ -36,39 +36,132 @@ function loadPage() {
 
         }, 6000);
     });
+	
+	
+	//
+	
+	var txt = 0;
+    var hab=0;
+    var cont = 0;
 
     var i = 0;
     var lag = $(window).width();
+	
+	$(".contact").animate({
+			left: "+=800px",
+			right: "-=800px"
+			},1000,"easeOutQuad");
 
     if(lag<1020){
-        $("#haha").animate({
-            marginTop: '-=1000px'
-        }, 1000, "easeOutQuad");
-        var $elem = $(haha);
-        i = 1;
-        ii();
+		
+		$(".contact").animate({
+			right: "+=1600px",
+			left: "-=1600px"
+			},1000,"easeOutQuad");
+
+		$(".txt").animate({
+			right: "0px"
+		},1000,"easeOutQuad");
+		txt=1;
+
+		$(window).scroll(function(event) {
+			var top_of_element = $(".hab").offset().top;
+			var bottom_of_element = $(".hab").offset().top + $(".hab").outerHeight();
+			var bottom_of_screen = $(window).scrollTop() + $(window).height();
+			var top_of_screen = $(window).scrollTop();
+		
+			if((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+				if(hab==0){
+					$(".hab").animate({
+						left: "0px"
+					},1000,"easeOutQuad");
+					hab=1;
+				}
+			}
+			else {
+				if(hab==1){
+					$(".hab").animate({
+						left: "600px"
+					},1000,"easeOutQuad");
+					hab=0;
+				}
+				// The element is not visible, do something else
+			}
+
+			$(window).scroll(function(event) {
+				var top_of_element = $(".contact").offset().top;
+				var bottom_of_element = $(".contact").offset().top + $(".contact").outerHeight();
+				var bottom_of_screen = $(window).scrollTop() + $(window).height();
+				var top_of_screen = $(window).scrollTop();
+			
+				if((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+					if(cont==0){
+						$(".contact").animate({
+							right: "-=800px",
+							left: "+=800px"
+						},1000,"easeOutQuad");
+						cont=1;
+					}
+				}
+				else {
+					if(cont==1){
+						$(".contact").animate({
+							right: "+=800px",
+							left: "-=800px"
+						},1000,"easeOutQuad");
+						cont=0;
+					}
+					// The element is not visible, do something else
+				}
+
+
+			});
+
+
+		});
     }else {
-        function NotMobile(){
         $(window).scroll(function (event) {
             var scroll = $(window).scrollTop();
-            if(scroll > 80 && i==0){
-                $("#haha").animate({
-                    marginTop: '-=1000px'
-                }, 1000, "easeOutQuad");
-                var $elem = $(haha);
-                i = 1;
+
+            if(scroll > 550 && cont==0){
+				$(".contact").animate({
+					left: "-=800px",
+					right: "+=800px"
+				},1000,"easeOutQuad");
+                cont=1;
             }
-    
-            if(scroll < 1 && i==1 && lag>1020){
-                $("#haha").animate({
-                    marginTop: '+=1000px'
-                }, 500, "easeInQuad");
-                var $elem = $(haha);
-                i = 0;
+
+            if(scroll > 80 && txt==0 && hab==0){
+				$(".txt").animate({
+					right: "0px"
+				},1000,"easeOutQuad");
+                txt=1;
+                $(".hab").animate({
+					left: "0px"
+				},1000,"easeOutQuad");
+				hab=1;
             }
+            
+            if(scroll < 450 && cont==1){
+				$(".contact").animate({
+					left: "+=800px",
+					right: "-=800px"
+				},1000,"easeOutQuad");
+                cont=0;
+            }
+
+            if(scroll < 40 && txt==1 && hab == 1){
+				$(".txt").animate({
+					right: "600px"
+				},1000,"easeOutQuad");
+                txt=0;
+                $(".hab").animate({
+					left: "600px"
+				},1000,"easeOutQuad");
+                hab=0;
+            }
+			
         });
-    }
-    NotMobile();
 }
     
 
