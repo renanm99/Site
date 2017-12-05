@@ -11,7 +11,7 @@ div{
 @media only screen and (orientation: portrait){
 	/* For 'mobile': */
 	.container{
-		font-size: 300%;
+		font-size: 150%;
 	}
 	.ability{
 		font-size: 70%;
