@@ -166,6 +166,9 @@ function loadPage() {
     
 
     $("#mail").click(function(){
+		$('#readmoremail').readmore();
+		alert();
+		/*
         if($("#formula").css('opacity')== 0){
             $("#formula").animate({
                 opacity: 1
@@ -174,7 +177,8 @@ function loadPage() {
             $("#formula").animate({
                 opacity: 0
             },400);
-        }
+		}
+		*/
         
     });
 
