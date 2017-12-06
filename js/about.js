@@ -38,6 +38,10 @@ function loadPage() {
     });
 	
 	
+<<<<<<< HEAD
+=======
+	//
+>>>>>>> master
 	
 	var txt = 0;
     var hab=0;
@@ -165,6 +169,12 @@ function loadPage() {
     
 
     $("#mail").click(function(){
+<<<<<<< HEAD
+=======
+		$('#readmoremail').readmore();
+		alert();
+		/*
+>>>>>>> master
         if($("#formula").css('opacity')== 0){
             $("#formula").animate({
                 opacity: 1
@@ -173,7 +183,8 @@ function loadPage() {
             $("#formula").animate({
                 opacity: 0
             },400);
-        }
+		}
+		*/
         
     });
 
