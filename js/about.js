@@ -166,7 +166,6 @@ function loadPage() {
 			
         });
 }
-    
 
     $("#mail").click(function(){
 
