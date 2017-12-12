@@ -111,13 +111,13 @@ div{
 
 .txt
 {
-	right: 600px;
+	right: 1000px;
 	position: relative;
 }
 
 .hab
 {
-	left: 650px;
+	left: 1000px;
 	position: relative;
 }
 
@@ -154,15 +154,7 @@ div{
 
 .contact
 {
-	left: 0px;
-	right: 0px;
-	position:relative;
-}
-
-.contact
-{
-	left: 0px;
-	right: 0px;
+	right: 1000px;
 	position:relative;
 }
 
@@ -180,16 +172,23 @@ div{
 
 .img_contacts
 {
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
+	position: static;
+	transition: 0.3s;
+}
+
+.img_contacts:hover
+{
+	transform: scale(1.2);
+	position: static;
+	transition: 0.2s;
 }
 
 .mail
 {
-	font-size: 200%;
+	position: absolute;
 }
-
-
 
 .pl
 {
