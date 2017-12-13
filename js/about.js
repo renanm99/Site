@@ -37,72 +37,67 @@ function loadPage() {
 		}, 6000);
 	});
 	//
-	var txt = 0;
-	var hab = 0;
-	var cont = 0;
 	//
 	$.fn.isInViewport = function () {
 		var elementTop = $(this).offset().top;
 		var elementBottom = elementTop + $(this).outerHeight();
 
 		var viewportTop = $(window).scrollTop();
-		var viewportBottom = (viewportTop + $(window).height()) - 100;
+		var viewportBottom = (viewportTop + $(window).height()) - 200;
 
 		return elementBottom > viewportTop && elementTop < viewportBottom;
 	};
 
 	$('.txt').each(function () {
 		if ($(this).isInViewport()) {
-			if (txt == 0) {
-				$(this).animate({
-					right: "0px"
-				}, 1000, "easeOutQuad");
-				$('.txt2').animate({
-					right: "0px"
-				}, 1000, "easeOutQuad");
-				txt = 1;
-			}
+			$(this).animate({
+				right: "0px"
+			}, 1000, "easeOutQuad");
 		}
 	});
-	
+
+	$('.txt2').each(function () {
+		if ($(this).isInViewport()) {
+			$(this).animate({
+				right: "0px"
+			}, 1000, "easeOutQuad");
+		}
+	});
+
 	$(window).scroll(function (event) {
 		$('.txt').each(function () {
 			if ($(this).isInViewport()) {
-				if (txt == 0) {
-					$(this).animate({
-						right: "0px"
-					}, 1000, "easeOutQuad");
-					$('.txt2').animate({
-						right: "0px"
-					}, 1000, "easeOutQuad");
-					txt = 1;
-				}
+				$(this).animate({
+					right: "0px"
+				}, 1000, "easeOutQuad");
+			}
+		});
+
+		$('.txt2').each(function () {
+			if ($(this).isInViewport()) {
+				$(this).animate({
+					right: "0px"
+				}, 1000, "easeOutQuad");
 			}
 		});
 
 		$('.ll').each(function () {
 			if ($(this).isInViewport()) {
-				if (hab == 0) {
-					$(this).animate({
+				$(this).animate({
+					left: "0px"
+				}, 1000, "easeOutQuad", function () {
+					$('.rider').animate({
 						left: "0px"
-					}, 1000, "easeOutQuad",function(){
-						$('.rider').animate({
-							left:"0px"
-						},1600,"easeOutQuad");
-					});
-					hab = 1;
-				}
+					}, 1600, "easeOutQuad");
+				});
 			}
 		});
 
 		$('.contact').each(function () {
 			if ($(this).isInViewport()) {
-				if (cont == 0) {
-					$(this).animate({
-						right: "0px"
-					}, 1000, "easeOutQuad");
-					cont = 1;
-				}
+				$(this).animate({
+					right: "0px"
+				}, 1000, "easeOutQuad");
 			}
 		});
 
@@ -110,7 +105,7 @@ function loadPage() {
 	});
 	//
 
-	$('#mail').click(function(){
+	$('#mail').click(function () {
 		$('.mail').fadeToggle();
 	});
 
