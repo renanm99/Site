@@ -40,21 +40,39 @@ function loadPage() {
 	var txt = 0;
 	var hab = 0;
 	var cont = 0;
+	//
+	$.fn.isInViewport = function () {
+		var elementTop = $(this).offset().top;
+		var elementBottom = elementTop + $(this).outerHeight();
+
+		var viewportTop = $(window).scrollTop();
+		var viewportBottom = (viewportTop + $(window).height()) - 100;
+
+		return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+
+	$('.txt').each(function () {
+		if ($(this).isInViewport()) {
+			if (txt == 0) {
+				$(this).animate({
+					right: "0px"
+				}, 1000, "easeOutQuad");
+				$('.txt2').animate({
+					right: "0px"
+				}, 1000, "easeOutQuad");
+				txt = 1;
+			}
+		}
+	});
+	
 	$(window).scroll(function (event) {
-		$.fn.isInViewport = function () {
-			var elementTop = $(this).offset().top;
-			var elementBottom = elementTop + $(this).outerHeight();
-
-			var viewportTop = $(window).scrollTop();
-			var viewportBottom = (viewportTop + $(window).height()) - 100;
-
-			return elementBottom > viewportTop && elementTop < viewportBottom;
-		};
-
 		$('.txt').each(function () {
 			if ($(this).isInViewport()) {
 				if (txt == 0) {
 					$(this).animate({
+						right: "0px"
+					}, 1000, "easeOutQuad");
+					$('.txt2').animate({
 						right: "0px"
 					}, 1000, "easeOutQuad");
 					txt = 1;
@@ -62,12 +80,16 @@ function loadPage() {
 			}
 		});
 
-		$('.hab').each(function () {
+		$('.ll').each(function () {
 			if ($(this).isInViewport()) {
 				if (hab == 0) {
 					$(this).animate({
 						left: "0px"
-					}, 1000, "easeOutQuad");
+					}, 1000, "easeOutQuad",function(){
+						$('.rider').animate({
+							left:"0px"
+						},1600,"easeOutQuad");
+					});
 					hab = 1;
 				}
 			}

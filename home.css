@@ -115,8 +115,24 @@ div{
 	position: relative;
 }
 
-.hab
+.txt2
 {
+	right: 1000px;
+	position: relative;
+}
+
+.ll
+{
+	left: 1000px;
+	position: relative;
+}
+
+.rider{
+	left: 280px;
+	position: relative;
+}
+
+.poli{
 	left: 1000px;
 	position: relative;
 }
