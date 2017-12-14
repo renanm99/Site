@@ -2,14 +2,14 @@ function loadPage() {
 	$('html, body').animate({
 		scrollTop: '0px'
 	}, 0.1);
-
-	$('.mail').fadeToggle();
 	/*"./img/road.jpg", "./img/rocha.jpg", "./img/ponte.jpeg", */
 	var landimages = ["./images/cervo.jpg","./images/lua.png","./images/arc.jpg","./images/mount.jpg","./images/plane.jpg","./images/moon.jpg","./images/sun.png"];
 	var focusimage = Math.floor((Math.random() * 7));
 	var image = landimages[focusimage];
 	$("#lands").attr("src", image);
 	focusimage++;
+	
+	$('.mail').fadeToggle();
 
 	$("#landsa").ready(function ae() {
 
