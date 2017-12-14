@@ -4,9 +4,9 @@ function loadPage() {
 	}, 0.1);
 
 	$('.mail').fadeToggle();
-
-	var landimages = ["./img/road.jpg", "./img/rocha.jpg", "./img/ponte.jpeg"];
-	var focusimage = Math.floor((Math.random() * 3));
+	/*"./img/road.jpg", "./img/rocha.jpg", "./img/ponte.jpeg", */
+	var landimages = ["./images/cervo.jpg","./images/lua.png","./images/arc.jpg","./images/mount.jpg","./images/plane.jpg","./images/moon.jpg","./images/sun.png"];
+	var focusimage = Math.floor((Math.random() * 7));
 	var image = landimages[focusimage];
 	$("#lands").attr("src", image);
 	focusimage++;
@@ -19,7 +19,7 @@ function loadPage() {
 				opacity: 0
 			}, 500, "easeInQuad", function () {
 
-				if (focusimage > 2) {
+				if (focusimage > 6) {
 					focusimage = 0;
 				}
 
@@ -59,7 +59,7 @@ function loadPage() {
 	$('.txt2').each(function () {
 		if ($(this).isInViewport()) {
 			$(this).animate({
-				right: "0px"
+				left: "0px"
 			}, 1000, "easeOutQuad");
 		}
 	});
@@ -76,7 +76,7 @@ function loadPage() {
 		$('.txt2').each(function () {
 			if ($(this).isInViewport()) {
 				$(this).animate({
-					right: "0px"
+					left: "0px"
 				}, 1000, "easeOutQuad");
 			}
 		});
@@ -84,7 +84,7 @@ function loadPage() {
 		$('.ll').each(function () {
 			if ($(this).isInViewport()) {
 				$(this).animate({
-					left: "0px"
+					right: "0px"
 				}, 1000, "easeOutQuad", function () {
 					$('.rider').animate({
 						left: "0px"
@@ -95,7 +95,7 @@ function loadPage() {
 
 		$('.contact').each(function () {
 			if ($(this).isInViewport()) {
-				$(this).animate({
+				$('.contact').animate({
 					right: "0px"
 				}, 1000, "easeOutQuad");
 			}
