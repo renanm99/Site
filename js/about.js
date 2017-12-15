@@ -16,6 +16,9 @@ function loadPage() {
 		if (wn==5) {
 			alert("YUUPII");
 			$('.texto').text('OOI WANWAN ( ͡° ͜ʖ ͡°)');
+			$('.contact').animate({
+				right: "0px"
+			}, 1000, "easeOutQuad");
 		}
 		wn++;
 	});
