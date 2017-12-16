@@ -2,7 +2,7 @@ function loadPage() {
 	$('html, body').animate({
 		scrollTop: '0px'
 	}, 0.1);
-	/*"./img/road.jpg", "./img/rocha.jpg", "./img/ponte.jpeg", */
+	
 	var landimages = ["./img/slide/cervo.jpg", "./img/slide/lua.png", "./img/slide/arc.jpg", "./img/slide/mount.jpg", "./img/slide/plane.jpg", "./img/slide/moon.jpg", "./img/slide/sun.png", "./img/slide/fortnite.jpg"];
 	var focusimage = Math.floor((Math.random() * 8));
 	var image = landimages[focusimage];
