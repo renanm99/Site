@@ -3,7 +3,7 @@ function loadPage() {
 		scrollTop: '0px'
 	}, 0.1);
 	/*"./img/road.jpg", "./img/rocha.jpg", "./img/ponte.jpeg", */
-	var landimages = ["./images/cervo.jpg", "./images/lua.png", "./images/arc.jpg", "./images/mount.jpg", "./images/plane.jpg", "./images/moon.jpg", "./images/sun.png"];
+	var landimages = ["./img/slide/cervo.jpg", "./img/slide/lua.png", "./img/slide/arc.jpg", "./img/slide/mount.jpg", "./img/slide/plane.jpg", "./img/slide/moon.jpg", "./img/slide/sun.png"];
 	var focusimage = Math.floor((Math.random() * 7));
 	var image = landimages[focusimage];
 	$("#lands").attr("src", image);
