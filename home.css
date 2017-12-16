@@ -36,10 +36,6 @@ div {
 	object-fit: cover;
 }
 
-.me:hover{
-	transform: scale(1.5);
-}
-
 .menu-item {
 	top: 40px;
 	left: -50px;
