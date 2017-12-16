@@ -11,18 +11,6 @@ function loadPage() {
 
 	$('.mail').fadeToggle();
 
-	var wn = 0;
-	$('#wnwn').click(function () {
-		if (wn == 5) {
-			alert("YUUPII");
-			$('.texto').text('OOI WANWAN ( ͡° ͜ʖ ͡°)');
-			$('.contact').animate({
-				right: "0px"
-			}, 1000, "easeOutQuad");
-		}
-		wn++;
-	});
-
 	$("#op").ready(function ae() {
 		setTimeout(function () {
 
